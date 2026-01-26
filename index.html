@@ -13,57 +13,48 @@
     /* 2. MAIN PAGE STYLES */
     body {
       margin: 0;
-      padding: 20px; /* Added some padding for smaller screens */
-      min-height: 100vh; /* Ensures it takes up full height */
+      padding: 0;
+      height: 100vh; /* Forces body to be full height of the screen */
+      width: 100%;   /* Forces body to be full width */
+      
+      /* Setting the image as a full-screen background */
+      background-image: url('profile.jpg');
+      background-size: cover; /* Ensures image covers the entire area without distorting */
+      background-position: center center; /* Centers the image */
+      background-repeat: no-repeat;
+
+      /* Flexbox to center text on top of the image */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffffff;
-      /* Standard font for the main text */
+      
+      /* Standard font for subtitle */
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     }
 
-    /* 3. STYLES FOR THE NEW ELEMENTS */
+    /* 3. STYLES FOR TEXT */
     
-    /* The new main title using your custom font */
+    /* The custom title "MILENA" */
     .custom-title-milena {
-      font-family: 'Hiatus Custom', cursive; /* Uses the font defined above */
-      font-size: 120px;  /* Very large, as script fonts usually need to be big */
-      line-height: 1;    /* Keeps it from having too much space above/below */
-      color: #000000;
-      margin-bottom: 20px; /* Space between title and image */
-      /* Optional: Sometimes script fonts look better slightly rotated */
-      /* transform: rotate(-5deg); */ 
+      font-family: 'Hiatus Custom', cursive;
+      font-size: 150px;  /* Made slightly larger for impact */
+      line-height: 1;
+      color: #ffffff;    /* Changed to WHITE for visibility against a photo */
+      /* Adds a subtle shadow to make text pop off the background */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      margin-bottom: 10px;
     }
 
-    /* The style for your photo */
-    .profile-image {
-        width: 300px;       /* Adjust width as desired */
-        height: auto;       /* Keeps the image proportions correct */
-        margin-bottom: 30px; /* Space below the image */
-        /* Optional: Uncomment the next line to make the image a circle */
-        /* border-radius: 50%; */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle soft shadow */
-    }
-
-
-    /* 4. STYLES FROM PREVIOUS STEP (slightly adjusted sizes) */
-    h1 {
-      font-size: 24px; /* Smaller now, since MILENA is the main focus */
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-weight: normal;
-      margin: 0 0 10px 0; /* Reset margins */
-      color: #000000;
-    }
-
+    /* The subtitle */
     .subtitle {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
-      letter-spacing: 3px;
-      color: #333333;
+      letter-spacing: 4px;
+      color: #ffffff;    /* Changed to WHITE for visibility */
       text-transform: uppercase;
+      /* Adds a subtle shadow to make text pop off the background */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -71,9 +62,6 @@
 
   <div class="custom-title-milena">MILENA</div>
 
-  <img src="profile.jpg" alt="Minnie Milena" class="profile-image">
-
-  <h1>Minnie Milena</h1>
   <div class="subtitle">
     Vocalist • Pianist • Songwriter
   </div>
