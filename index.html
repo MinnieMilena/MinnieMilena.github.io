@@ -3,41 +3,77 @@
 <head>
   <title>Minnie Milena</title>
   <style>
-    /* This section controls the look of your site */
+    /* 1. TEACHING THE BROWSER YOUR CUSTOM FONT */
+    @font-face {
+      font-family: 'Hiatus Custom';
+      /* This MUST match the filename exactly as you uploaded it to GitHub */
+      src: url('Hiatus copy.ttf'); 
+    }
+
+    /* 2. MAIN PAGE STYLES */
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
+      padding: 20px; /* Added some padding for smaller screens */
+      min-height: 100vh; /* Ensures it takes up full height */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffffff; /* White background */
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* The clean "Wix" look */
+      background-color: #ffffff;
+      /* Standard font for the main text */
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
     }
 
+    /* 3. STYLES FOR THE NEW ELEMENTS */
+    
+    /* The new main title using your custom font */
+    .custom-title-milena {
+      font-family: 'Hiatus Custom', cursive; /* Uses the font defined above */
+      font-size: 120px;  /* Very large, as script fonts usually need to be big */
+      line-height: 1;    /* Keeps it from having too much space above/below */
+      color: #000000;
+      margin-bottom: 20px; /* Space between title and image */
+      /* Optional: Sometimes script fonts look better slightly rotated */
+      /* transform: rotate(-5deg); */ 
+    }
+
+    /* The style for your photo */
+    .profile-image {
+        width: 300px;       /* Adjust width as desired */
+        height: auto;       /* Keeps the image proportions correct */
+        margin-bottom: 30px; /* Space below the image */
+        /* Optional: Uncomment the next line to make the image a circle */
+        /* border-radius: 50%; */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle soft shadow */
+    }
+
+
+    /* 4. STYLES FROM PREVIOUS STEP (slightly adjusted sizes) */
     h1 {
-      font-size: 40px;
-      letter-spacing: 5px;
+      font-size: 24px; /* Smaller now, since MILENA is the main focus */
+      letter-spacing: 4px;
       text-transform: uppercase;
       font-weight: normal;
-      margin-bottom: 10px;
+      margin: 0 0 10px 0; /* Reset margins */
       color: #000000;
     }
 
     .subtitle {
-      font-size: 16px;       /* Typical size for Paragraph 2 */
-      font-weight: 300;      /* Makes it look light and elegant */
-      letter-spacing: 3px;   /* Adds space between letters */
-      color: #333333;        /* Dark grey text */
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #333333;
       text-transform: uppercase;
     }
   </style>
 </head>
 <body>
 
-  <h1>Minnie Milena</h1>
+  <div class="custom-title-milena">MILENA</div>
 
+  <img src="profile.jpg" alt="Minnie Milena" class="profile-image">
+
+  <h1>Minnie Milena</h1>
   <div class="subtitle">
     Vocalist • Pianist • Songwriter
   </div>
